@@ -12,3 +12,40 @@ void menu(void)
     printf("0 - Sair\n");
 }
 
+void escreverarray(int valores[], int tamanho) 
+{
+    int i;
+    printf("Os valores no array sao:\n");
+    for (i = 0; i < 18; i++) {
+        printf("%d ", valores[i]);
+    }
+    printf("\n");    
+}
+
+
+void lerarray(int valores[], int tamanho) 
+{
+    int i;
+
+    printf("Introduza 18 números inteiros entre -1 e 18:\n");
+
+    for (i = 0; i < 18; i++) {
+        int numero;
+        do {
+            printf("%dº número: ", i + 1);
+            scanf("%d", &numero);
+
+            if (numero < -1 || numero > 18) {
+                printf("Valor fora do intervalo [-1, 18]. Tente novamente.\n");
+            }
+        } while (numero < -1 || numero > 18);
+
+        valores[i] = numero;
+    }
+    printf("Leitura concluida.\n");
+}
+
+void medianaarray(int valores[],int tamanho)
+{
+    
+}

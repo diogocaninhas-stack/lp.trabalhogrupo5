@@ -1,10 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions-team-x.h"
-#include "functions-team-x.c"
+
 int main(void)
 {
     printf("Trabalho de Laboratorio de Programacao - Grupo 5\n");
+    // Leitura do array de 18 inteiros entre -1 e 18
+    int valores[18];
+    lerarray(valores, 18);
+
+    escreverarray(valores, 18);
+    // Menu de opções
     int opcao;
     do
     {

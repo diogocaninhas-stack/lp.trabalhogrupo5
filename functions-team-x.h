@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "functions-team-x.c"
 
-
-
-void lerArray1DInteiros (int[], int);
-void menu(void);
+void menu();
+void escreverarray(int valores[], int tamanho);
+void lerarray(int valores[], int tamanho);
