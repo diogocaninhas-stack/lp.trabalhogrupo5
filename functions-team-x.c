@@ -1,5 +1,6 @@
-#include <stdio.h>
 #include <math.h>
+#include "functions-team-x.h"
+#include <stdio.h>
 
 void menu(void)
 {
@@ -18,7 +19,7 @@ void menu(void)
     printf("0 - Sair\n");
 }
 
-void escreverarray(int valores[], int tamanho) 
+void escreverarray(int valores[]) 
 {
     int i;
     printf("Os valores no array sao:\n");
@@ -29,7 +30,7 @@ void escreverarray(int valores[], int tamanho)
 }
 
 
-void lerarray(int valores[], int tamanho) 
+/*void lerarray(int valores[]) 
 {
     int i;
     printf("Introduza 18 números inteiros entre -1 e 18:\n");
@@ -38,16 +39,51 @@ void lerarray(int valores[], int tamanho)
         int numero;
         do {
             printf("%dº número: ", i + 1);
-            scanf("%d", &numero);
+            (void)scanf("%d", &numero);
 
-            if (numero < -1 || numero > 18) {
+            if (numero < -1 || numero > 18) 
                 printf("Valor fora do intervalo [-1, 18]. Tente novamente.\n");
-            }
+            
         } while (numero < -1 || numero > 18);
 
         valores[i] = numero;
     }
     printf("Leitura concluida.\n");
+}
+*/
+void lerarray(int valores[])
+{
+    printf("Introduza 18 números inteiros entre -1 e 18:\n");
+
+    for (int i = 0; i < 18; i++) {
+        int numero;
+        int resultado;
+
+        do {
+            printf("%dº número: ", i + 1);
+
+            resultado = scanf("%d", &numero);
+
+            // Caso o utilizador escreva algo que não seja número
+            if (resultado != 1) {
+                printf("Entrada inválida! Introduza apenas números inteiros.\n");
+
+                // limpar buffer
+                while (getchar() != '\n');
+
+                continue;  // volta a pedir o mesmo número
+            }
+
+            if (numero < -1 || numero > 18) {
+                printf("Valor fora do intervalo [-1, 18]. Tente novamente.\n");
+            }
+
+        } while (resultado != 1 || numero < -1 || numero > 18);
+
+        valores[i] = numero;
+    }
+
+    printf("Leitura concluída.\n");
 }
 
 
@@ -74,6 +110,7 @@ double mediana(int valores[], int tamanho)
         int m2 = tamanho / 2;
         return (valores[m1] + valores[m2]) / 2.0;
     }
+    else{return (valores[tamanho/2-1] + valores[tamanho/2]) /2.0;}
 }
 void divisiveis3(int valores[],int tamanho)
 {

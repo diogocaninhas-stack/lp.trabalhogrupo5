@@ -1,10 +1,10 @@
-#include <stdio.h>
-#include "functions-team-x.c"
-#include <math.h>
+
+#ifndef FUNCTIONS_TEAM_X_H
+#define FUNCTIONS_TEAM_X_H
 
 void menu();
-void escreverarray(int valores[], int tamanho);
-void lerarray(int valores[], int tamanho);
+void escreverarray(int valores[]);
+void lerarray(int valores[]);
 double mediana(int valores[], int tamanho);
 void ordenar(int valores[], int tamanho);
 void divisiveis3(int valores[],int tamanho);
@@ -24,3 +24,5 @@ void mostrarMatriz(int matriz[18][18]);
 void transporMatriz(const int M[18][18], int MT[18][18]);
 void mostrarMatrizT(int MT[18][18]);
 void mostrarAjuda(void);
+
+#endif

@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "functions-team-x.h"
-#include <math.h>
+#include <stdio.h>
 #include <string.h>
+
 
 int main(int argc, char *argv[])
 {
@@ -19,16 +18,19 @@ if (argc > 1) {
     printf("Trabalho de Laboratorio de Programacao - Grupo 5\n");
     // Leitura do array de 18 inteiros entre -1 e 18
     int valores[18];
-    lerarray(valores, 18);
+    lerarray(valores);
 
-    escreverarray(valores, 18);
+    escreverarray(valores);
     // Menu de opções
     int opcao;
     do
     {
         menu();
         printf("Escolha uma opcao: ");
-        scanf("%d", &opcao);
+        if(scanf("%d", &opcao)<0){
+            fprintf(stderr, "Entrada inválida");
+            return 1;
+        }
 
         switch (opcao)
         {
@@ -68,7 +70,7 @@ if (argc > 1) {
                 break;
             case 8:
                 int novo[18];
-                lerarray(novo,18);
+                lerarray(novo);
                 mistura(novo,valores,18);
                 break;
             case 9:
@@ -77,14 +79,21 @@ if (argc > 1) {
             case 10:
                 int v2[18];
                 int matriz2[18][18];
-                lerarray(v2, 18);
+                lerarray(v2);
                 calcularMatriz(valores,v2,matriz2);
                 mostrarMatriz(matriz2);
+                int feito10=1;
                 break;
             case 11:
+                if (!feito10) {
+                puts("Primeiro executa a opção 10 para calcular a matriz.");
+                break;
+                }
+
                 int MT[18][18];
                 transporMatriz(matriz2,MT);
                 mostrarMatrizT(MT);
+                
                 break;
             case 0:
                 printf("Saindo do programa...\n");
