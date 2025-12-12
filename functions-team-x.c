@@ -200,3 +200,78 @@ for(int i = 0; i < tamanho; i++)
     }
 }
 }
+
+int primo(int n) {
+    if (n < 2) return 0;        // -1, 0, 1 não são primos
+    if (n == 2) return 1;       // 2 é primo
+    // Teste de divisibilidade simples: 2 até n-1
+    for (int d = 2; d < n; d++) {
+        if (n % d == 0) return 0; // encontrou divisor => não é primo
+    }
+    return 1; // não encontrou divisor => primo
+}
+
+void numerosprimos(int valores[],int tamanho)
+{
+for (int i = 0; i < tamanho; i++) {
+        int n = valores[i];
+        if (primo(n)) {
+            printf("%d \n", n);
+        }
+}
+}
+void calcularMatriz(int v1[], int v2[], int matriz[18][18]) 
+{
+    for (int i = 0; i < 18; i++) 
+    {
+        for (int j = 0; j < 18; j++) {
+            matriz[i][j] = v1[i] * v2[j];
+        }
+    }
+
+}
+
+void mostrarMatriz(int matriz[18][18]) {
+    printf("Matriz %dx%d:\n", 18, 18);
+    for (int i = 0; i < 18; i++) {
+        for (int j = 0; j < 18; j++) {
+            printf("%4d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+}
+void transporMatriz(const int M[18][18], int MT[18][18]) 
+{
+    for (int i = 0; i < 18; i++) 
+    {
+        for (int j = 0; j < 18; j++) 
+        {
+            MT[i][j] = M[j][i];
+        }
+    }
+}
+
+void mostrarMatrizT(int MT[18][18]) {
+    for (int i = 0; i < 18; i++) {
+        for (int j = 0; j < 18; j++) {
+            printf("%3d ", MT[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void mostrarAjuda(void) {
+    printf("=== AJUDA ===\n");
+    printf("Este programa trabalha com um vetor de %d numeros inteiros (-1 a 18).\n\n", 18);
+    printf("Regras:\n");
+    printf("- Introduza %d valores entre -1 e 18 (validacao obrigatoria).\n", 18);
+    printf("- Depois escolha uma opcao do menu para executar uma funcionalidade.\n\n");
+    printf("Exemplo: na opcao 2, o programa calcula a raiz quadrada de cada valor do vetor.\n");
+    printf("Nota: entradas fora do intervalo [-1, 18] serao rejeitadas e pedidas novamente.\n");
+    printf("================\n\n");
+}
+
+
+
+
+
