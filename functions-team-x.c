@@ -30,7 +30,7 @@ void escreverarray(int valores[])
 }
 
 
-/*void lerarray(int valores[]) 
+void lerarray(int valores[]) 
 {
     int i;
     printf("Introduza 18 números inteiros entre -1 e 18:\n");
@@ -50,42 +50,6 @@ void escreverarray(int valores[])
     }
     printf("Leitura concluida.\n");
 }
-*/
-void lerarray(int valores[])
-{
-    printf("Introduza 18 números inteiros entre -1 e 18:\n");
-
-    for (int i = 0; i < 18; i++) {
-        int numero;
-        int resultado;
-
-        do {
-            printf("%dº número: ", i + 1);
-
-            resultado = scanf("%d", &numero);
-
-            // Caso o utilizador escreva algo que não seja número
-            if (resultado != 1) {
-                printf("Entrada inválida! Introduza apenas números inteiros.\n");
-
-                // limpar buffer
-                while (getchar() != '\n');
-
-                continue;  // volta a pedir o mesmo número
-            }
-
-            if (numero < -1 || numero > 18) {
-                printf("Valor fora do intervalo [-1, 18]. Tente novamente.\n");
-            }
-
-        } while (resultado != 1 || numero < -1 || numero > 18);
-
-        valores[i] = numero;
-    }
-
-    printf("Leitura concluída.\n");
-}
-
 
 void ordenar(int valores[], int tamanho) {
     int i, trocou;
