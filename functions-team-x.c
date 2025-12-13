@@ -122,7 +122,6 @@ void matriz18x18(const int valores[18],int matriz[18][18])
 }
 void mostrarmatriz(const int matriz[18][18])
 {    
-//mostrar a matriz
     printf("\nMatriz 18x18 resultante:\n");
     for (int i = 0; i < 18; i++){
         for (int j = 0; j < 18; j++){

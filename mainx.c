@@ -15,7 +15,7 @@ if (argc > 1) {
         }
     }
 
-    printf("Trabalho de Laboratorio de Programacao - Grupo 5\n");
+    printf("Trabalho de Laboratorio de Programacao - Grupo 5(PL4) \n");
     int valores[18];
     lerarray(valores);
 

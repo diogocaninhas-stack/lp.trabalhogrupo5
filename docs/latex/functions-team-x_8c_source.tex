@@ -1,0 +1,270 @@
+\doxysection{functions-\/team-\/x.c}
+\hypertarget{functions-team-x_8c_source}{}\label{functions-team-x_8c_source}\mbox{\hyperlink{functions-team-x_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{functions-team-x_8h}{functions-\/team-\/x.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00005}\mbox{\hyperlink{functions-team-x_8c_ad16e5e62f3579a7048e6b981b172885e}{00005}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_ad16e5e62f3579a7048e6b981b172885e}{menu}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00007}00007\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Menu\ de\ opcoes:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00008}00008\ \ \ \ \ printf(\textcolor{stringliteral}{"{}1\ -\/\ Construção\ de\ uma\ matriz\ 18\ por\ 18,\ em\ que\ cada\ linha\ é\ composta\ pelo\ vetor\ lido\ (primeira\ linha)\ e\ por\ permutações\ dos\ seus\ valores\ (outras\ linhas)\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00009}00009\ \ \ \ \ printf(\textcolor{stringliteral}{"{}2\ -\/\ \ Cálculo\ da\ raíz\ quadrada\ de\ todos\ os\ elementos\ no\ vetor\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00010}00010\ \ \ \ \ printf(\textcolor{stringliteral}{"{}3\ -\/\ Devolução\ do\ vetor,\ \ com\ a\ primeira\ \ metade\ dos\ valores\ ordenada\ por\ ordem\ crescente\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00011}00011\ \ \ \ \ printf(\textcolor{stringliteral}{"{}4\ -\/\ Cálculo\ \ da\ \ soma\ \ da\ \ primeira\ metade\ \ dos\ \ elementos\ no\ \ vetor\ com\ os\ da\ segunda\ metade\ (dá\ um\ vetor\ com\ metado\ do\ tamanho)\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00012}00012\ \ \ \ \ printf(\textcolor{stringliteral}{"{}5\ -\/\ Cálculo\ da\ mediana\ dos\ elementos\ no\ vetor\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00013}00013\ \ \ \ \ printf(\textcolor{stringliteral}{"{}6\ -\/\ Devolução\ dos\ valores\ do\ vetor\ que\ não\ são\ divisíveis\ por\ três\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00014}00014\ \ \ \ \ printf(\textcolor{stringliteral}{"{}7\ -\/\ Ajuda\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00015}00015\ \ \ \ \ printf(\textcolor{stringliteral}{"{}8\ -\/\ Leitura\ de\ um\ novo\ vetor,\ e\ devolução\ de\ um\ \ vetor\ que\ \ mistura\ \ metade\ do\ primeiro\ vetor\ e\ metade\ do\ segundo\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00016}00016\ \ \ \ \ printf(\textcolor{stringliteral}{"{}9\ -\/\ Apresentação\ \ da\ \ decomposição\ \ em\ \ números\ \ primos\ \ dos\ \ números\ no\ vetor\ inicial\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00017}00017\ \ \ \ \ printf(\textcolor{stringliteral}{"{}10\ -\/\ Geração\ \ de\ \ um\ \ novo\ \ vetor\ \ 1x18\ \ \ aleatório,\ \ cálculo\ \ e\ \ devolução\ \ da\ matriz\ 18x18\ resultante\ do\ produto\ do\ vetor\ inicial\ com\ o\ novo\ vetor\ lido\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00018}00018\ \ \ \ \ printf(\textcolor{stringliteral}{"{}11\ -\/\ Cálculo\ e\ apresentação\ da\ matriz\ transposta\ referida\ no\ ponto\ anterior\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00019}00019\ \ \ \ \ printf(\textcolor{stringliteral}{"{}0\ -\/\ Sair\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00022}\mbox{\hyperlink{functions-team-x_8c_a8b1c9008279081829dfd3b52fa0b6f5e}{00022}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a8b1c9008279081829dfd3b52fa0b6f5e}{escreverarray}}(\textcolor{keywordtype}{int}\ valores[])\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00023}00023\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00025}00025\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Os\ valores\ no\ array\ sao:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ 18;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ valores[i]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00029}00029\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00033}\mbox{\hyperlink{functions-team-x_8c_a6c5a925b702e4d7175cce10b725fd700}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a6c5a925b702e4d7175cce10b725fd700}{lerarray}}(\textcolor{keywordtype}{int}\ valores[])\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00036}00036\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Introduza\ 18\ números\ inteiros\ entre\ -\/1\ e\ 18:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ 18;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numero;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%dº\ número:\ "{}},\ i\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ (void)scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&numero);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (numero\ <\ -\/1\ ||\ numero\ >\ 18)\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Valor\ fora\ do\ intervalo\ [-\/1,\ 18].\ Tente\ novamente.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (numero\ <\ -\/1\ ||\ numero\ >\ 18);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ valores[i]\ =\ numero;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00051}00051\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Leitura\ concluida.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00054}\mbox{\hyperlink{functions-team-x_8c_a937c5cb05e4d969e82b24da2ddbacbae}{00054}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a937c5cb05e4d969e82b24da2ddbacbae}{ordenar}}(\textcolor{keywordtype}{int}\ valores[],\ \textcolor{keywordtype}{int}\ tamanho)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ trocou;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ trocou\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ tamanho\ -\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (valores[i]\ >\ valores[i\ +\ 1])\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tmp\ =\ valores[i];}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ valores[i]\ =\ valores[i\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ valores[i\ +\ 1]\ =\ tmp;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trocou\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00066}00066\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (trocou);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00068}\mbox{\hyperlink{functions-team-x_8c_ae9ab2886d06dbcd932e3bc2ecb7dd795}{00068}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{functions-team-x_8c_ae9ab2886d06dbcd932e3bc2ecb7dd795}{mediana}}(\textcolor{keywordtype}{int}\ valores[],\ \textcolor{keywordtype}{int}\ tamanho)\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00069}00069\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{functions-team-x_8c_a937c5cb05e4d969e82b24da2ddbacbae}{ordenar}}(valores,\ tamanho);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{if}\ (tamanho\ \%\ 2\ ==\ 0)\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00072}00072\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m1\ =\ tamanho\ /\ 2\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m2\ =\ tamanho\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (valores[m1]\ +\ valores[m2])\ /\ 2.0;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{else}\{\textcolor{keywordflow}{return}\ (valores[tamanho/2-\/1]\ +\ valores[tamanho/2])\ /2.0;\}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00078}00078\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00079}\mbox{\hyperlink{functions-team-x_8c_a908659e9d889fc3131248edffacee55c}{00079}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a908659e9d889fc3131248edffacee55c}{divisiveis3}}(\textcolor{keywordtype}{int}\ valores[],\textcolor{keywordtype}{int}\ tamanho)}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00080}00080\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00081}00081\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Valores\ não\ divisiveis\ por\ 3:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;i<tamanho;i++)}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00083}00083\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (valores[i]\ \%\ 3\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}},valores[i]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00090}00090\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00091}00091\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00092}\mbox{\hyperlink{functions-team-x_8c_a6ca3c245f434925e73a467fef52b981e}{00092}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a6ca3c245f434925e73a467fef52b981e}{mistura}}(\textcolor{keywordtype}{int}\ v[],\textcolor{keywordtype}{int}\ valores[],\textcolor{keywordtype}{int}\ tamanho)}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00093}00093\ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00094}00094\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Primeira\ metade:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;i<\ tamanho/2;i++)}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00096}00096\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d"{}},valores[i]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00099}00099\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00100}00100\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Segunda\ metade:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00101}00101\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k=tamanho/2;k<tamanho;k++)}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00102}00102\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d"{}},v[k]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00105}00105\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00106}00106\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00107}00107\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00108}\mbox{\hyperlink{functions-team-x_8c_aa55af4f5f5d115cb6278eab21c796840}{00108}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_aa55af4f5f5d115cb6278eab21c796840}{matriz18x18}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ valores[18],\textcolor{keywordtype}{int}\ matriz[18][18])}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00109}00109\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00110}00110\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ matriz[0][j]\ =\ valores[j];}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00113}00113\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ 18;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indice\ =\ j\ +1;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (indice\ >=\ 18)\{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ indice\ =\ indice\ -\/\ 18;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00118}00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ matriz[i][j]\ =\ matriz[i\ -\/\ 1][(j\ +\ 1)\ \%\ 18];}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00120}00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00122}00122\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00123}\mbox{\hyperlink{functions-team-x_8c_a535cc6b9faa0beffb13b1c0227e06084}{00123}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a535cc6b9faa0beffb13b1c0227e06084}{mostrarmatriz}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ matriz[18][18])}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00124}00124\ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00125}00125\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)nMatriz\ 18x18\ resultante:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%3d"{}},\ matriz[i][j]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00132}00132\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00133}\mbox{\hyperlink{functions-team-x_8c_a8a0d248817c1ba4420a62876bdd52059}{00133}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a8a0d248817c1ba4420a62876bdd52059}{ordenarPrimeiraMetade}}(\textcolor{keywordtype}{int}\ vetor[],\textcolor{keywordtype}{int}\ tamanho)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00134}00134\ \ \ \ \ \textcolor{keywordtype}{int}\ metade=tamanho/2;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00135}00135\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ metade\ -\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ metade\ -\/\ i\ -\/\ 1;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(vetor[j]\ >\ vetor[j\ +\ 1])\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ temp\ =\ vetor[j];}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vetor[j]\ =\ vetor[j\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vetor[j\ +\ 1]\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00143}00143\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00144}00144\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00146}\mbox{\hyperlink{functions-team-x_8c_a7d7f3319db72910682d9fe1f50f1d9c1}{00146}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a7d7f3319db72910682d9fe1f50f1d9c1}{mostrarVetor}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ v[],\ \textcolor{keywordtype}{int}\ tamanho)\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00147}00147\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00148}00148\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tamanho;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00149}00149\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ v[i]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00150}00150\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00151}00151\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00152}00152\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00155}\mbox{\hyperlink{functions-team-x_8c_aff75c8bff265cd8f99ae45529010edf7}{00155}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_aff75c8bff265cd8f99ae45529010edf7}{somaMetades}}(\textcolor{keywordtype}{int}\ vetor[],\ \textcolor{keywordtype}{int}\ tamanho,\ \textcolor{keywordtype}{int}\ resultado[])\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00156}00156\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00157}00157\ \ \ \ \ \textcolor{keywordtype}{int}\ metade\ =\ tamanho\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00159}00159\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ metade;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00160}00160\ \ \ \ \ \ \ \ \ resultado[i]\ =\ vetor[i]\ +\ vetor[i\ +\ metade];}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00161}00161\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00162}00162\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00164}\mbox{\hyperlink{functions-team-x_8c_adc086a9e9bd9a3639bd3504640a0cf70}{00164}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_adc086a9e9bd9a3639bd3504640a0cf70}{mostrarVetormetades}}(\textcolor{keywordtype}{int}\ vetor[],\ \textcolor{keywordtype}{int}\ tamanho)\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00165}00165\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00166}00166\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tamanho;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00167}00167\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ vetor[i]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00168}00168\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00169}00169\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00170}00170\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00171}\mbox{\hyperlink{functions-team-x_8c_a8015a4241a5890f6730fa993f94c6e1b}{00171}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a8015a4241a5890f6730fa993f94c6e1b}{raizquadrada}}(\textcolor{keywordtype}{int}\ valores[],\textcolor{keywordtype}{int}\ tamanho)}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00172}00172\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00173}00173\ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tamanho;\ i++)}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00174}00174\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00175}00175\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Elemento\ \%2d:\ \%2d\ -\/>"{}},\ i\ +\ 1,\ valores[i]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00176}00176\ \ \ \ \ \textcolor{keywordflow}{if}\ (valores[i]\ <\ 0)}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00177}00177\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00178}00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (valores[i]\ ==\ -\/1)\{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00179}00179\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Raiz\ quadrada\ de\ um\ -\/1:\ numero\ complexo\ (i)\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00181}00181\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00182}00182\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nao\ ha\ raiz\ quadrada\ real\ (numero\ negativo)"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00183}00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00184}00184\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00185}00185\ \ \ \ \ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00186}00186\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00187}00187\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ raiz\ =\ sqrt((\textcolor{keywordtype}{double})valores[i]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00188}00188\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Raiz\ quadrada:\ \%.4f\(\backslash\)n"{}},\ raiz);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00189}00189\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00190}00190\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00191}00191\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00193}\mbox{\hyperlink{functions-team-x_8c_a30d47071b258cfef99f4bd7ab1caad2a}{00193}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions-team-x_8c_a30d47071b258cfef99f4bd7ab1caad2a}{primo}}(\textcolor{keywordtype}{int}\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00194}00194\ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ <\ 2)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00195}00195\ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ ==\ 2)\ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00196}00196\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ d\ =\ 2;\ d\ <\ n;\ d++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00197}00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ \%\ d\ ==\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00198}00198\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00199}00199\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00200}00200\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00202}\mbox{\hyperlink{functions-team-x_8c_afd74097e1aafd298fe3eb035be56e802}{00202}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_afd74097e1aafd298fe3eb035be56e802}{numerosprimos}}(\textcolor{keywordtype}{int}\ valores[],\textcolor{keywordtype}{int}\ tamanho)}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00203}00203\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00204}00204\ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tamanho;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00205}00205\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ valores[i];}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00206}00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{functions-team-x_8c_a30d47071b258cfef99f4bd7ab1caad2a}{primo}}(n))\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ \(\backslash\)n"{}},\ n);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00208}00208\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00209}00209\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00210}00210\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00211}\mbox{\hyperlink{functions-team-x_8c_ada34b90ada110321b2ca66643ffc528e}{00211}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_ada34b90ada110321b2ca66643ffc528e}{calcularMatriz}}(\textcolor{keywordtype}{int}\ v1[],\ \textcolor{keywordtype}{int}\ v2[],\ \textcolor{keywordtype}{int}\ matriz[18][18])\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00212}00212\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00213}00213\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00214}00214\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ matriz[i][j]\ =\ v1[i]\ *\ v2[j];}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00217}00217\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00218}00218\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00220}00220\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00222}\mbox{\hyperlink{functions-team-x_8c_a7fba3d1ad089de730311925c9c132049}{00222}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a7fba3d1ad089de730311925c9c132049}{mostrarMatriz}}(\textcolor{keywordtype}{int}\ matriz[18][18])\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00223}00223\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Matriz\ \%dx\%d:\(\backslash\)n"{}},\ 18,\ 18);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00224}00224\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00225}00225\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%4d\ "{}},\ matriz[i][j]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00227}00227\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00228}00228\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00229}00229\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00230}00230\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00231}\mbox{\hyperlink{functions-team-x_8c_ad671d69bda006e5d8d4af1b3f3d5157a}{00231}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_ad671d69bda006e5d8d4af1b3f3d5157a}{transporMatriz}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ M[18][18],\ \textcolor{keywordtype}{int}\ MT[18][18])\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00232}00232\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00233}00233\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00234}00234\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00235}00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00236}00236\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ MT[i][j]\ =\ M[j][i];}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00238}00238\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00239}00239\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00240}00240\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00242}\mbox{\hyperlink{functions-team-x_8c_a477f749314c6f4e3208a4ecf5a26917d}{00242}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_a477f749314c6f4e3208a4ecf5a26917d}{mostrarMatrizT}}(\textcolor{keywordtype}{int}\ MT[18][18])\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00243}00243\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00244}00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%3d\ "{}},\ MT[i][j]);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00246}00246\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00247}00247\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00248}00248\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00249}00249\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00251}\mbox{\hyperlink{functions-team-x_8c_ae7bb133e62112c9458870d235531045b}{00251}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{functions-team-x_8c_ae7bb133e62112c9458870d235531045b}{mostrarAjuda}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00252}00252\ \ \ \ \ printf(\textcolor{stringliteral}{"{}===\ AJUDA\ ===\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00253}00253\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Este\ programa\ trabalha\ com\ um\ vetor\ de\ \%d\ numeros\ inteiros\ (-\/1\ a\ 18).\(\backslash\)n\(\backslash\)n"{}},\ 18);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00254}00254\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Regras:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00255}00255\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/\ Introduza\ \%d\ valores\ entre\ -\/1\ e\ 18\ (validacao\ obrigatoria).\(\backslash\)n"{}},\ 18);}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00256}00256\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/\ Depois\ escolha\ uma\ opcao\ do\ menu\ para\ executar\ uma\ funcionalidade.\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00257}00257\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Exemplo:\ na\ opcao\ 2,\ o\ programa\ calcula\ a\ raiz\ quadrada\ de\ cada\ valor\ do\ vetor.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00258}00258\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nota:\ entradas\ fora\ do\ intervalo\ [-\/1,\ 18]\ serao\ rejeitadas\ e\ pedidas\ novamente.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00259}00259\ \ \ \ \ printf(\textcolor{stringliteral}{"{}================\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00260}00260\ \}}
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00263}00263\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00264}00264\ }
+\DoxyCodeLine{\Hypertarget{functions-team-x_8c_source_l00265}00265\ }
+
+\end{DoxyCode}
