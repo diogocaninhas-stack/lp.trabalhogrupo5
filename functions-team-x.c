@@ -67,7 +67,7 @@ void ordenar(int valores[], int tamanho) {
 }
 double mediana(int valores[], int tamanho) 
 {
-    ordenar(valores, tamanho); // garante que está ordenado
+    ordenar(valores, tamanho);
     if (tamanho % 2 == 0) 
     {
         int m1 = tamanho / 2 - 1;
@@ -107,19 +107,15 @@ void mistura(int v[],int valores[],int tamanho)
 }
 void matriz18x18(const int valores[18],int matriz[18][18])
 {
-//Preenchimento da primeira linha da matriz que recebe os valores do vetor
     for (int j = 0; j < 18; j++){
         matriz[0][j] = valores[j];
     }
-
-    //Preenchimento das restantes linhas, cada linha seguinte é uma permutação da linha anterior
     for (int i = 1; i < 18; i++){
         for (int j = 0; j < 18; j++){
                 int indice = j +1;
         if (indice >= 18){
             indice = indice - 18;
         }
-            //Cada elemento da nova linha recebe o elemento da posição (j+1) da linha anterior e volta ao início quando atinge o final
             matriz[i][j] = matriz[i - 1][(j + 1) % 18];
         }
     }
@@ -136,13 +132,10 @@ void mostrarmatriz(const int matriz[18][18])
     }
 }
 void ordenarPrimeiraMetade(int vetor[],int tamanho) {
-    // Para vetor de 18 elementos
     int metade=tamanho/2;
-    //  ordena��o para a primeira metade
     for(int i = 0; i < metade - 1; i++) {
         for(int j = 0; j < metade - i - 1; j++) {
             if(vetor[j] > vetor[j + 1]) {
-                // Troca os elementos
                 int temp = vetor[j];
                 vetor[j] = vetor[j + 1];
                 vetor[j + 1] = temp;
@@ -178,12 +171,9 @@ void mostrarVetormetades(int vetor[], int tamanho)
 }
 void raizquadrada(int valores[],int tamanho)
 {
-//Cálculo da raiz quadrada
 for(int i = 0; i < tamanho; i++)
 {
     printf("Elemento %2d: %2d ->", i + 1, valores[i]);
-
-    //Verifica se o número é negativo
     if (valores[i] < 0)
     {
         if (valores[i] == -1){
@@ -195,7 +185,6 @@ for(int i = 0; i < tamanho; i++)
     }
     else 
     {
-        //Calcula a raiz quadrada
         double raiz = sqrt((double)valores[i]);
         printf("Raiz quadrada: %.4f\n", raiz);
     }
@@ -203,13 +192,12 @@ for(int i = 0; i < tamanho; i++)
 }
 
 int primo(int n) {
-    if (n < 2) return 0;        // -1, 0, 1 não são primos
-    if (n == 2) return 1;       // 2 é primo
-    // Teste de divisibilidade simples: 2 até n-1
+    if (n < 2) return 0;
+    if (n == 2) return 1;
     for (int d = 2; d < n; d++) {
-        if (n % d == 0) return 0; // encontrou divisor => não é primo
+        if (n % d == 0) return 0;
     }
-    return 1; // não encontrou divisor => primo
+    return 1;
 }
 
 void numerosprimos(int valores[],int tamanho)
