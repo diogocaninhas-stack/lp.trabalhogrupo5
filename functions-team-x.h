@@ -19,7 +19,7 @@ void escreverarray(int valores[]);
 /**
  * @brief Lê valores do utilizador.
  * @param valores Vetor de inteiros onde serão armazenados os dados lidos.
- * @note O tamanho do vetor é 18.
+ * @note O tamanho do vetor é 18 e o void serve para descartar números fora do intervalo.
  */
 void lerarray(int valores[]);
 
@@ -28,6 +28,7 @@ void lerarray(int valores[]);
  * @param valores Vetor de inteiros.
  * @param tamanho Número de elementos no vetor.
  * @return A mediana dos valores como `double`.
+ * @note Else utilizado para o caso erro.
  */
 double mediana(int valores[], int tamanho);
 
@@ -35,6 +36,7 @@ double mediana(int valores[], int tamanho);
  * @brief Ordena um vetor de inteiros (ordem crescente).
  * @param valores Vetor a ordenar (modificado in-place).
  * @param tamanho Número de elementos do vetor.
+ * @note Usada a variável tmp(temporária) para guardar o valor temporáriamente, se trocou=1 houve uma troca.
  */
 void ordenar(int valores[], int tamanho);
 
@@ -42,6 +44,7 @@ void ordenar(int valores[], int tamanho);
  * @brief Mostra os elementos do vetor que são divisíveis por 3.
  * @param valores Vetor de inteiros.
  * @param tamanho Número de elementos.
+ * @note Mostra apenas os valores não divisiveis por 3.
  */
 void divisiveis3(int valores[], int tamanho);
 
@@ -57,12 +60,14 @@ void mistura(int v[], int valores[], int tamanho);
  * @brief Construção de uma matriz 18 por 18, em que cada linha é composta pelo vetor lido (primeira linha) e por permutações dos seus valores (outras linhas).
  * @param valores Vetor de 18 inteiros.
  * @param matriz Matriz 18x18 de inteiros (saída).
+ * @note Const indica que os elementos do array valores não podem ser modificados dentro da função.
  */
 void matriz18x18(const int valores[18], int matriz[18][18]);
 
 /**
  * @brief Devolução da matriz 18x18 resultante do produto do vetor inicial com o novo vetor lido.
  * @param matriz Matriz 18x18 de inteiros.
+ * @note Const indica que os elementos do array valores não podem ser modificados dentro da função.
  */
 void mostrarmatriz(const int matriz[18][18]);
 
@@ -101,6 +106,7 @@ void mostrarVetormetades(int vetor[], int tamanho);
  * @brief Calcula a raiz quadrada.
  * @param valores Vetor de inteiros.
  * @param tamanho Número de elementos.
+ * @note sqrt operação de raiz quadrada da biblioteca <math.h>.
  */
 void raizquadrada(int valores[], int tamanho);
 
@@ -155,4 +161,4 @@ void mostrarAjuda(void);
 }
 #endif
 
-#endif /* FUNCTIONS_TEAM_X_H */
+#endif

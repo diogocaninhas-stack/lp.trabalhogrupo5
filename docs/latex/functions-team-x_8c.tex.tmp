@@ -74,19 +74,19 @@ cálculo da matriz 18x18 resultante do produto do vetor inicial com o novo vetor
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00211}{211}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
+Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00210}{210}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00212\ \{}
-\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ }
-\DoxyCodeLine{00214\ \ \ \ \ \{}
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ \{}
-\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ matriz[i][j]\ =\ v1[i]\ *\ v2[j];}
-\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00218\ \ \ \ \ \}}
-\DoxyCodeLine{00219\ }
-\DoxyCodeLine{00220\ \}}
+\DoxyCodeLine{00211\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ }
+\DoxyCodeLine{00213\ \ \ \ \ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ matriz[i][j]\ =\ v1[i]\ *\ v2[j];}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00217\ \ \ \ \ \}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \}}
 
 \end{DoxyCode}
 \Hypertarget{functions-team-x_8c_a908659e9d889fc3131248edffacee55c}\label{functions-team-x_8c_a908659e9d889fc3131248edffacee55c} 
@@ -106,6 +106,9 @@ Mostra os elementos do vetor que são divisíveis por 3.
 {\em tamanho} & Número de elementos. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Mostra apenas os valores não divisiveis por 3. 
+\end{DoxyNote}
 
 
 Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00079}{79}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
@@ -176,7 +179,7 @@ Lê valores do utilizador.
 \hline
 \end{DoxyParams}
 \begin{DoxyNote}{Note}
-O tamanho do vetor é 18. 
+O tamanho do vetor é 18 e o void serve para descartar números fora do intervalo. 
 \end{DoxyNote}
 
 
@@ -222,6 +225,9 @@ Construção de uma matriz 18 por 18, em que cada linha é composta pelo vetor l
 {\em matriz} & Matriz 18x18 de inteiros (saída). \\
 \hline
 \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Const indica que os elementos do array valores não podem ser modificados dentro da função. 
+\end{DoxyNote}
 
 
 Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00108}{108}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
@@ -264,6 +270,9 @@ Calcula a mediana de um vetor de inteiros.
 \begin{DoxyReturn}{Returns}
 A mediana dos valores como {\ttfamily double}. 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Else utilizado para o caso erro. 
+\end{DoxyNote}
 
 
 Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00068}{68}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
@@ -372,20 +381,20 @@ Apresenta um ecrã de ajuda com comandos/opções disponíveis.
 
 
 
-Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00251}{251}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
+Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00250}{250}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00252\ \ \ \ \ printf(\textcolor{stringliteral}{"{}===\ AJUDA\ ===\(\backslash\)n"{}});}
-\DoxyCodeLine{00253\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Este\ programa\ trabalha\ com\ um\ vetor\ de\ \%d\ numeros\ inteiros\ (-\/1\ a\ 18).\(\backslash\)n\(\backslash\)n"{}},\ 18);}
-\DoxyCodeLine{00254\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Regras:\(\backslash\)n"{}});}
-\DoxyCodeLine{00255\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/\ Introduza\ \%d\ valores\ entre\ -\/1\ e\ 18\ (validacao\ obrigatoria).\(\backslash\)n"{}},\ 18);}
-\DoxyCodeLine{00256\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/\ Depois\ escolha\ uma\ opcao\ do\ menu\ para\ executar\ uma\ funcionalidade.\(\backslash\)n\(\backslash\)n"{}});}
-\DoxyCodeLine{00257\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Exemplo:\ na\ opcao\ 2,\ o\ programa\ calcula\ a\ raiz\ quadrada\ de\ cada\ valor\ do\ vetor.\(\backslash\)n"{}});}
-\DoxyCodeLine{00258\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nota:\ entradas\ fora\ do\ intervalo\ [-\/1,\ 18]\ serao\ rejeitadas\ e\ pedidas\ novamente.\(\backslash\)n"{}});}
-\DoxyCodeLine{00259\ \ \ \ \ printf(\textcolor{stringliteral}{"{}================\(\backslash\)n\(\backslash\)n"{}});}
-\DoxyCodeLine{00260\ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00251\ \ \ \ \ printf(\textcolor{stringliteral}{"{}===\ AJUDA\ ===\(\backslash\)n"{}});}
+\DoxyCodeLine{00252\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Este\ programa\ trabalha\ com\ um\ vetor\ de\ \%d\ numeros\ inteiros\ (-\/1\ a\ 18).\(\backslash\)n\(\backslash\)n"{}},\ 18);}
+\DoxyCodeLine{00253\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Regras:\(\backslash\)n"{}});}
+\DoxyCodeLine{00254\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/\ Introduza\ \%d\ valores\ entre\ -\/1\ e\ 18\ (validacao\ obrigatoria).\(\backslash\)n"{}},\ 18);}
+\DoxyCodeLine{00255\ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/\ Depois\ escolha\ uma\ opcao\ do\ menu\ para\ executar\ uma\ funcionalidade.\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00256\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Exemplo:\ na\ opcao\ 2,\ o\ programa\ calcula\ a\ raiz\ quadrada\ de\ cada\ valor\ do\ vetor.\(\backslash\)n"{}});}
+\DoxyCodeLine{00257\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nota:\ entradas\ fora\ do\ intervalo\ [-\/1,\ 18]\ serao\ rejeitadas\ e\ pedidas\ novamente.\(\backslash\)n"{}});}
+\DoxyCodeLine{00258\ \ \ \ \ printf(\textcolor{stringliteral}{"{}================\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00259\ \}}
 
 \end{DoxyCode}
 \Hypertarget{functions-team-x_8c_a535cc6b9faa0beffb13b1c0227e06084}\label{functions-team-x_8c_a535cc6b9faa0beffb13b1c0227e06084} 
@@ -403,6 +412,9 @@ Devolução da matriz 18x18 resultante do produto do vetor inicial com o novo ve
 {\em matriz} & Matriz 18x18 de inteiros. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Const indica que os elementos do array valores não podem ser modificados dentro da função. 
+\end{DoxyNote}
 
 
 Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00123}{123}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
@@ -437,19 +449,19 @@ Mostra uma matriz 18x18.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00222}{222}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
+Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00221}{221}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00223\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Matriz\ \%dx\%d:\(\backslash\)n"{}},\ 18,\ 18);}
-\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ \{}
-\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ \{}
-\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%4d\ "{}},\ matriz[i][j]);}
-\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{00229\ \ \ \ \ \}}
-\DoxyCodeLine{00230\ \}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Matriz\ \%dx\%d:\(\backslash\)n"{}},\ 18,\ 18);}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%4d\ "{}},\ matriz[i][j]);}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00228\ \ \ \ \ \}}
+\DoxyCodeLine{00229\ \}}
 
 \end{DoxyCode}
 \Hypertarget{functions-team-x_8c_a477f749314c6f4e3208a4ecf5a26917d}\label{functions-team-x_8c_a477f749314c6f4e3208a4ecf5a26917d} 
@@ -469,18 +481,18 @@ Mostra a matriz transposta 18x18.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00242}{242}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
+Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00241}{241}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ \{}
-\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ \{}
-\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%3d\ "{}},\ MT[i][j]);}
-\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{00248\ \ \ \ \ \}}
-\DoxyCodeLine{00249\ \}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%3d\ "{}},\ MT[i][j]);}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00247\ \ \ \ \ \}}
+\DoxyCodeLine{00248\ \}}
 
 \end{DoxyCode}
 \Hypertarget{functions-team-x_8c_a7d7f3319db72910682d9fe1f50f1d9c1}\label{functions-team-x_8c_a7d7f3319db72910682d9fe1f50f1d9c1} 
@@ -564,18 +576,18 @@ Identifica e/ou mostra números primos do vetor.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00202}{202}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
+Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00201}{201}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00203\ \{}
-\DoxyCodeLine{00204\ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tamanho;\ i++)\ \{}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ valores[i];}
-\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{functions-team-x_8c_a30d47071b258cfef99f4bd7ab1caad2a}{primo}}(n))\ \{}
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ \(\backslash\)n"{}},\ n);}
-\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ \{}
+\DoxyCodeLine{00203\ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tamanho;\ i++)\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ valores[i];}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{functions-team-x_8c_a30d47071b258cfef99f4bd7ab1caad2a}{primo}}(n))\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ \(\backslash\)n"{}},\ n);}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00208\ \}}
 \DoxyCodeLine{00209\ \}}
-\DoxyCodeLine{00210\ \}}
 
 \end{DoxyCode}
 \Hypertarget{functions-team-x_8c_a937c5cb05e4d969e82b24da2ddbacbae}\label{functions-team-x_8c_a937c5cb05e4d969e82b24da2ddbacbae} 
@@ -595,6 +607,9 @@ Ordena um vetor de inteiros (ordem crescente).
 {\em tamanho} & Número de elementos do vetor. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Usada a variável tmp(temporária) para guardar o valor temporáriamente, se trocou=1 houve uma troca. 
+\end{DoxyNote}
 
 
 Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00054}{54}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
@@ -677,18 +692,18 @@ Função que complementa a função numerosprimos.
 \end{DoxyNote}
 
 
-Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00193}{193}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
+Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00192}{192}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ <\ 2)\ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ ==\ 2)\ \textcolor{keywordflow}{return}\ 1;}
-\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ d\ =\ 2;\ d\ <\ n;\ d++)\ \{}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ \%\ d\ ==\ 0)\ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00198\ \ \ \ \ \}}
-\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
-\DoxyCodeLine{00200\ \}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ <\ 2)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ ==\ 2)\ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ d\ =\ 2;\ d\ <\ n;\ d++)\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ \%\ d\ ==\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00197\ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00199\ \}}
 
 \end{DoxyCode}
 \Hypertarget{functions-team-x_8c_a8015a4241a5890f6730fa993f94c6e1b}\label{functions-team-x_8c_a8015a4241a5890f6730fa993f94c6e1b} 
@@ -708,6 +723,9 @@ Calcula a raiz quadrada.
 {\em tamanho} & Número de elementos. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyNote}{Note}
+sqrt operação de raiz quadrada da biblioteca \texorpdfstring{$<$}{<}math.\+h\texorpdfstring{$>$}{>}. 
+\end{DoxyNote}
 
 
 Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00171}{171}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
@@ -721,19 +739,18 @@ Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00171}{171}} of 
 \DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{if}\ (valores[i]\ <\ 0)}
 \DoxyCodeLine{00177\ \ \ \ \ \{}
 \DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (valores[i]\ ==\ -\/1)\{}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Raiz\ quadrada\ de\ um\ -\/1:\ numero\ complexo\ (i)\(\backslash\)n"{}});}
-\DoxyCodeLine{00180\ }
-\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nao\ ha\ raiz\ quadrada\ real\ (numero\ negativo)"{}});}
-\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00184\ \ \ \ \ \}}
-\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{else}\ }
-\DoxyCodeLine{00186\ \ \ \ \ \{}
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ raiz\ =\ sqrt((\textcolor{keywordtype}{double})valores[i]);}
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Raiz\ quadrada:\ \%.4f\(\backslash\)n"{}},\ raiz);}
-\DoxyCodeLine{00189\ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Raiz\ quadrada\ de\ um\ -\/1:\ numero\ complexo\ (i)\(\backslash\)n"{}});\}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nao\ ha\ raiz\ quadrada\ real\ (numero\ negativo)"{}});}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00183\ \ \ \ \ \}}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00185\ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ raiz\ =\ sqrt((\textcolor{keywordtype}{double})valores[i]);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Raiz\ quadrada:\ \%.4f\(\backslash\)n"{}},\ raiz);}
+\DoxyCodeLine{00188\ \ \ \ \ \}}
+\DoxyCodeLine{00189\ \}}
 \DoxyCodeLine{00190\ \}}
-\DoxyCodeLine{00191\ \}}
 
 \end{DoxyCode}
 \Hypertarget{functions-team-x_8c_aff75c8bff265cd8f99ae45529010edf7}\label{functions-team-x_8c_aff75c8bff265cd8f99ae45529010edf7} 
@@ -795,18 +812,18 @@ Só disponível se a opção anterior for feita primeiro.
 \end{DoxyWarning}
 
 
-Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00231}{231}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
+Definition at line \mbox{\hyperlink{functions-team-x_8c_source_l00230}{230}} of file \mbox{\hyperlink{functions-team-x_8c_source}{functions-\/team-\/x.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00232\ \{}
-\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ }
-\DoxyCodeLine{00234\ \ \ \ \ \{}
-\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ }
-\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ MT[i][j]\ =\ M[j][i];}
-\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00239\ \ \ \ \ \}}
-\DoxyCodeLine{00240\ \}}
+\DoxyCodeLine{00231\ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 18;\ i++)\ }
+\DoxyCodeLine{00233\ \ \ \ \ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 18;\ j++)\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ MT[i][j]\ =\ M[j][i];}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \}}
 
 \end{DoxyCode}

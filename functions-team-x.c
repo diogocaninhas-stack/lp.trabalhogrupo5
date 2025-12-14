@@ -176,9 +176,8 @@ for(int i = 0; i < tamanho; i++)
     if (valores[i] < 0)
     {
         if (valores[i] == -1){
-        printf("Raiz quadrada de um -1: numero complexo (i)\n");
-
-        }else {
+        printf("Raiz quadrada de um -1: numero complexo (i)\n");}
+        else {
         printf("Nao ha raiz quadrada real (numero negativo)");
         }
     }
